@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icono -->
+    <link rel="icon" href="../img/icono.png" sizes="any">
+    <!--  CSS -->
+    <link rel="stylesheet" href="../css/preguntas.css">
+    <link rel="stylesheet" href="../css/style.css" >
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" >
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <title>Preguntas frecuentes</title>
+</head>
+
+<body>
+    <!-- *NAV -->
+    <nav class="itemNav">
+        <!-- nav que se despliega vertical -->
+                <ul class="barralat">
+                    <li onclick=hideSidebar()>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                        </svg>
+                    </li>                                                  
+                    <li><a href="formulario.html">Iniciar Sesion</a></li>
+                    <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+                    <li><a href="#">Saber Mas</a></li>
+                    <li><a href="#">Contacta con Nosotros</a></li>
+                </ul>
+                
+                
+        <!-- nav normal sin desplegar ni nada:  -->
+                <ul class="arriba">
+                    <section>
+                        <img src="../img/logoTiendaT3-removebg-preview.png" />
+                        <span class="barraNav">|</span>
+                        <li><a href="index.html">Altair</a></li>
+                    </section>
+
+                    <section>
+                        <li onclick=showProductos() class="desplegableNav">Nuestros Productos&nbsp;<i class="fa-solid fa-caret-down"></i>
+                            <ul class="barraProductos">
+                                <li onclick=mostrarFiltradoAnillos()><a href="index.html#item2">Anillos</a></li>
+                                <li onclick=mostrarFiltradoPendientes()><a href="index.html#item2">Pendientes</a></li>
+                                <li onclick=mostrarFiltradoCollares()><a href="index.html#item2">Collares</a></li>
+                            </ul>                      
+                        </li>
+                        
+                        <li onclick=mostrarTodos() class="topSellers"><a href="index.html#item2">Top Sellers</a></li>
+                    </section>
+
+                    <section>
+                        <li><a href="formulario.html">Iniciar Sesion</a></li>
+                        <li onclick=showSidebar()>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+                                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                            </svg>
+                        </li>
+                    </section>                        
+                </ul>
+            </nav>
+            <script src="../js/script2.js"></script>
+    <!-- * TABLA ------------------------------------------------- -->
+<table>
+                
+    <thead>
+        <tr>
+            <th>PREGUNTAS FRECUENTES</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Índice</th>
+        </tr>
+        <tr>
+            <td>
+                <ol>
+                    <li><a href="#p1">¿Qué beneficios tiene adquirir este producto o servicio?</a> </li>          
+                    <li><a href="#p2">¿Realmente necesito este producto o servicio?</a></li>        
+                    <li><a href="#p2">¿Cómo funciona?</a></li>           
+                    <li><a href="#p2">¿Tiene garantía?</a></li>        
+                    <li><a href="#p2">¿Cuánto dinero cuesta la adquisición de este producto?</a></li>         
+                    <li><a href="#p2">¿Qué métodos de pago aceptan?</a></li>           
+                    <li><a href="#p2">¿En cuánto tiempo tendré listo mi producto?</a></li>      
+                    <li><a href="#p2">¿Cuál es el periodo de devolución?</a></li>
+                </ol>
+            </td>             
+        </tr>
+        </tbody>
+    <tfoot>
+        <tr>
+            <td>Si quiere saber algo más contacte con nuestro <a href="#ac">servicio de atención al cliente</a></td>
+        </tr>
+    </tfoot>
+</table>
+
+
+
+<!-- *Preguntas de abajo -->
+<section class="secPreguntas">
+  <ol>
+    <li><h2 id="p1">¿Qué beneficios tiene adquirir este producto o servicio?</h2></li>
+
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur excepturi totam voluptates cum <br>
+    debitis impedit commodi doloribus similique a aperiam, nemo iusto incidunt, 
+    voluptatibus fugiat<br> est numquam omnis obcaecati aspernatur.</p>
+
+<li> <h2 id="p2">¿Realmente necesito este producto o servicio?</h2> </li>
+
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur excepturi totam voluptates cum <br>
+    debitis impedit commodi doloribus similique a aperiam, nemo iusto incidunt, 
+    voluptatibus fugiat<br> est numquam omnis obcaecati aspernatur.</p>
+
+    <li> <h2 id="p3">¿Cómo funciona?</h2> </li>
+
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur excepturi totam voluptates cum <br>
+    debitis impedit commodi doloribus similique a aperiam, nemo iusto incidunt, 
+    voluptatibus fugiat<br> est numquam omnis obcaecati aspernatur.</p>
+
+    <li> <h2 id="p4">¿Tiene garantía?</h2> </li>
+
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur excepturi totam voluptates cum <br>
+    debitis impedit commodi doloribus similique a aperiam, nemo iusto incidunt, 
+    voluptatibus fugiat<br> est numquam omnis obcaecati aspernatur.</p>
+
+    <li> <h2 id="p5">¿Cuánto dinero cuesta la adquisición de este producto?</h2> </li>
+
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur excepturi totam voluptates cum <br>
+    debitis impedit commodi doloribus similique a aperiam, nemo iusto incidunt, 
+    voluptatibus fugiat<br> est numquam omnis obcaecati aspernatur.</p>
+    
+    <li> <h2 id="p6">¿Qué métodos de pago aceptan?</h2> </li>
+
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur excepturi totam voluptates cum <br>
+    debitis impedit commodi doloribus similique a aperiam, nemo iusto incidunt, 
+    voluptatibus fugiat<br> est numquam omnis obcaecati aspernatur.</p>
+
+    <li> <h2 id="p7">¿En cuánto tiempo tendré listo mi producto?</h2> </li>
+
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur excepturi totam voluptates cum <br>
+    debitis impedit commodi doloribus similique a aperiam, nemo iusto incidunt, 
+    voluptatibus fugiat<br> est numquam omnis obcaecati aspernatur.</p>
+
+    <h2 id="p8">¿Cuál es el periodo de devolución?</h2>
+
+<p>El tiempo estára basado en: </p>
+    <ul>
+        <li>El período de devolución será duplicado con nuestra tarjeta socio</li>
+        <li>15 días naturales</li>
+        <li>Con justificación de regalo de cumpleaños con previsión será ampliable a un periodo de 45 días naturales</li>
+        <li>En época navideña ampliable hasta 90 días naturales (a partir de noviembre) </li>
+    </ul>
+</ol>
+<div class="ultimo">
+    <h2 id="ac">¿Algo más?</h2>
+<P>Si tienes alguna duda llame a nuestro teléfono de atención al cliente: 917617617, <br>
+    escríbanos un whatsapp a: 617171717 o contáctenos por el email: gamesShop@gmail.com 
+   <br>Atendemos de 7:00am a 21:00pm.</P>
+</div>
+</section>   
+
+<!-- *FOOTER -->
+<footer class="item">
+    <h3>
+        Más sobre Nosotros
+    </h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.343705756462!2d-3.345996184394734!3d40.4897820793567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42494c6320a6db%3A0x1a1f05a173815fd0!2sIES%20Alonso%20de%20Avellaneda!5e0!3m2!1ses!2ses!4v1646208696483!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+    <div class="right">
+        <div class="links">
+            <a href="#">Políticas de Privacidad</a>
+            <a href="#">¿Algo que debamos saber?</a>
+            <a href="preguntas.html">Preguntas Frecuentes</a>
+            <a href="#">Contacta con nosotros</a>
+        </div>
+        <ul>
+            <li>Envíos a la Península gratuitos</li>
+            <li>Envíos de más de 50€ gratuitos </li>
+            <li>Disponibilidad de juegos físico o digital</li>
+            <li>Teléfono de atención: 617617617</li>
+        </ul>
+        <div class="iconos">
+            <a href="https://www.instagram.com" target="_blank" class="icon"><i class="fa-brands fa-instagram"></i></a> 
+            <a href="https://www.facebook.com" target="_blank" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank" class="icon"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.youtube.com" target="_blank" class="icon"><i class="fa-brands fa-youtube"></i></a>                  
+        </div>
+        <p>Copyright © 2026 todos los derechos reservados</p>
+    </div>
+</footer>
+
+</body>
+</html>

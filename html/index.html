@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altair | Inicio</title>
+    <link rel="icon" href="../img/logoTiendaT3-removebg-preview.png" sizes="any">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" >
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../css/principal.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&family=Jacquard+24&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Jacquard+12+Charted&family=Jacquard+24&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="container" class="todalagrid">  
+        <!-- nav que se despliega vertical -->
+        <ul class="barralat">
+            <li onclick=hideSidebar()>
+                <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+            </li>                                                  
+            <li><a href="formulario.html">Iniciar Sesion</a></li>
+            <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+            <li><a href="#">Saber Mas</a></li>
+            <li><a href="#">Contacta con Nosotros</a></li>
+        </ul>   
+            <nav class="itemNav" id="itemNav">
+                        
+                        
+                <!-- nav normal sin desplegar ni nada:  -->
+                        <ul class="arriba">
+                            <section>
+                                <img src="../img/logoTiendaT3-removebg-preview.png" />
+                                <span class="barraNav">|</span>
+                                <li><a href="index.html">Altair</a></li>
+                            </section>
+
+                            <section>
+                                <li onclick=showProductos() class="desplegableNav">Nuestros Productos&nbsp;<i class="fa-solid fa-caret-down"></i>
+                                    <ul class="barraProductos">
+                                        <li onclick=mostrarFiltradoAnillos()><a href="#item2">Anillos</a></li>
+                                        <li onclick=mostrarFiltradoPendientes()><a href="#item2">Pendientes</a></li>
+                                        <li onclick=mostrarFiltradoCollares()><a href="#item2">Collares</a></li>
+                                    </ul>                      
+                                </li>
+                                
+                                <li onclick=mostrarTodos() class="topSellers"><a href="#item2">Top Sellers</a></li>
+                            </section>
+
+                            <section>
+                                <li><a href="formulario.html">Iniciar Sesion</a></li>
+                                <li onclick=showSidebar()>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+                                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                                    </svg>
+                                </li>
+                            </section>                      
+                            
+                        </ul>
+                    </nav>
+                
+                <!-- Script para el nav desplegarse al hacer click -->
+                <script src="../js/script.js"></script>
+                
+
+                <div class="intro">
+                        <h1 class="jacquard-24-regular">Altair</h1>
+                        <!-- <p class="filtroImg">&nbsp;</p> -->
+                        <img src="../img/intro_anillo3.gif" width="500px" class="primeraImg">          
+                    <p class="jacquard-24-regular ">Welcome to Paradise</p> 
+                    <p><button><a href="#item2">Conócelo</a></button></p> 
+                    <section class="textoIntro">
+                        <p>Adéntrate y conoce nuestras joyas favoritas hechas en España
+                        </p>   
+                        <p>Con Plata194 de la mejor calidad</p>
+                        <p>Donde destacan nuestros: </p>
+                    </section> 
+                    <section class="resto">
+                        <p class="recomendamos">&nbsp;</p>
+                        <p>Collares</p>   
+                        <p><img src="../img/collar2.png" onclick=mostrarFiltradoCollares() class="foto1"></p>
+                        <p>Anillos</p>
+                        <p><img src="../img/anillo.png" onclick=mostrarFiltradoAnillos() class="foto2"></p>
+                        <p>Pendientes</p>
+                        <p><img src="../img/pendientes.png" onclick=mostrarFiltradoPendientes() class="foto3"></p>
+                        <p class="proximamente">y proximamente más</p>
+                        
+                        <h3>Conoce nuestros Top Sellers</h3>
+                    </section>         
+
+                    <!--* Icono Carrito Contador  -->
+                    <a href="#carrito2">
+                <div class="fondoCarrito">&nbsp;</div>
+                <div class="container-icon">
+                    <div class="container-cart-icon">
+                        <div class="fondocarrito">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="icon-cart"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                            />
+                        </svg>
+                        </div>
+                        <div class="count-products">
+                            <span id="contador-productos">0</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            </a>
+
+                <!-- MAIN -->
+        <main id="item2" class="item"> 
+                                       
+        </main>
+
+        <!--* CARRITO -->
+
+        <aside class="item">  
+            <div class="carrito">
+                <p> CARRITO <i class="fa-solid fa-cart-shopping"></i></p>
+            <div id="carrito2">
+
+            </div>
+            <div class="fin"><p><strong>Total:</strong><span id="total"></span>&euro;</p>
+            <div class="botonFinal"><p><button id="comprar">Realizar pedido</button></p>
+                <p><button id="boton-vaciar">Vaciar Carrito</button></div></p>
+            </div> 
+            
+            </div>     
+            </div>
+                     
+        </aside>
+        <script src="../js/carrito.js"></script>
+
+        <!--* FOOTER -->
+        <footer class="item">
+            <h3>
+                Más sobre Nosotros
+            </h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.343705756462!2d-3.345996184394734!3d40.4897820793567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42494c6320a6db%3A0x1a1f05a173815fd0!2sIES%20Alonso%20de%20Avellaneda!5e0!3m2!1ses!2ses!4v1646208696483!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+            <div class="right">
+                <div class="links">
+                    <a href="#">Políticas de Privacidad</a>
+                    <a href="#">¿Algo que debamos saber?</a>
+                    <a href="preguntas.html">Preguntas Frecuentes</a>
+                    <a href="#">Contacta con nosotros</a>
+                </div>
+                <ul>
+                    <li>Envíos a la Península gratuitos</li>
+                    <li>Envíos de más de 50€ gratuitos </li>
+                    <li>Disponibilidad de juegos físico o digital</li>
+                    <li>Teléfono de atención: 617617617</li>
+                </ul>
+                <div class="iconos">
+                    <a href="https://www.instagram.com" target="_blank" class="icon"><i class="fa-brands fa-instagram"></i></a> 
+                    <a href="https://www.facebook.com" target="_blank" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.x.com" target="_blank" class="icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com" target="_blank" class="icon"><i class="fa-brands fa-youtube"></i></a>                  
+                </div>
+                <p>Copyright © 2024 todos los derechos reservados</p>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+
+</html>

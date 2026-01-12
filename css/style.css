@@ -1,0 +1,660 @@
+
+/* fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Style de la fuente del nombre de la tienda */
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #b2becf;
+}
+
+.jacquard-24-regular {
+  font-family: "Jacquard 24", system-ui;
+  font-weight: 1;
+  font-style: normal;
+}
+
+.almendra-regular {
+  font-family: "Almendra", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+.almendra-bold {
+  font-family: "Almendra", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.almendra-regular-italic {
+  font-family: "Almendra", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.almendra-bold-italic {
+  font-family: "Almendra", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* FONDO */
+body{
+    min-height: 100vh;
+    /* background: linear-gradient(to right, #f1efeb, #f0e9dd);   */
+    background-color: #000000;
+    /* background-image: url('../img/fondo4.jpg'); */
+    background-size: contain;
+    font-family: 'Monserrat', sans-serif; 
+    
+
+}
+
+
+/* TEMA DEL GRID */
+
+.todalagrid {
+    display: grid;
+    width: 100%;
+    margin:auto auto;
+  
+    grid-template-rows: 80px auto auto auto auto; 
+    grid-template-columns: auto;
+  
+    /* DIBUJAR LAS AREAS */
+    grid-template-areas: 
+    "nav"
+    "div"
+    "main"
+    "aside"
+    "foot"
+    ;
+  }
+  
+  .item {
+      padding: 8px;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+    }
+
+  
+  /** NAV */
+  nav {
+    grid-area: nav;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    display:flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+
+  }
+  
+  @keyframes scrollNav {
+    0% {scale: 1; background-color: #f9f9f9;}
+    40%, 100% {scale: .9; background-color: rgba(255, 255, 255, 0.658);}
+    
+  }
+
+  nav section{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    font-size: 19px;
+  }
+
+  nav section:nth-child(1){
+    margin-left: 0%;
+    
+  }
+
+  nav section:nth-child(1) img{
+    margin-top: -10px;
+    padding: 0%;
+    width: 70px;
+  }
+
+  nav section:nth-child(2) li{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  nav section:nth-child(3){
+    margin-right: 0%;
+
+  }
+  nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav li{
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .desplegableNav{
+    display: flex;
+    flex-direction: row;
+    padding-top: 13px;
+    display: block;
+  }
+
+  .barraProductos ul li {
+    position:relative;
+    margin:0;
+    padding:0;
+  }
+
+  .barraProductos ul ul{
+    display:none;
+    position:absolute;
+    left:0;
+    padding:0;
+  }
+  
+   .barraProductos{
+    margin-top: 12px;
+    height: 100px;
+    z-index: 999;
+    background-color: #f9f9f9;
+    flex-direction: column;
+    justify-content: flex-start;  
+  } 
+
+  .barraProductos li{
+    width: 100%;
+    padding-left: 5px;
+  }
+  nav a{
+    text-decoration: none;
+    color: black;
+  }
+
+  nav li:hover:not(nav section:last-child li:last-child){
+    background-color: rgb(230, 229, 229);
+  }
+
+  nav section:last-child li:last-child{
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+  nav li:hover{
+    cursor: pointer;
+  }
+
+  nav li:first-child{  
+    margin-right: auto;
+  }
+
+  .barraNav{
+    margin-top: 5px;
+    font-size: 2rem;
+    color: #33333365;
+    margin-right: 5px;
+  }
+
+  .barralat{
+    position: fixed;
+    top: 0;
+    right: 0px;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.459);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .barralat li{
+    width: 100%;
+    padding-left: 10px;
+  }
+
+
+
+  /** RESPONSIVE DEL NAV */
+
+  @media(max-width: 800px){ /* aqui ocultamos lo que pone en el nav "principal", */
+    .hideOnMobile{ /* el situado en horizontal arriba al disminuir el tamaño de la pantalla*/
+        display: none;
+    }
+  }
+
+  @media(max-width: 451px){ /* para que al usarlo en movil, el nav lateral que aparece al hacer click*/
+    .barralat{ /* ocupe directamente toda la pantalla en vez de solo una parte desplegada como hacia hasta ahora */
+        width: 100%;
+    }
+  }
+
+  /** INTRODUCCION */
+  .intro{
+    height: auto;
+    color: rgb(255, 240, 254);
+    font-weight: 300;
+    font-size: 200%;
+    text-align: center;
+    background-color: #000000;
+    width: 70%;
+
+    margin: auto;
+  }
+
+  .intro h1{
+    color: rgb(255, 225, 253);
+    font-size: 86px;
+  }
+  .primeraImg{
+    filter:grayscale() ;
+  }
+
+  .filtroImg{
+    position: absolute;
+    top: 200px;
+    z-index: 10;
+    right: 700px;
+    height: 440px;
+    width: 500px;
+    opacity: .1;
+    background-color: rgb(248, 157, 255);
+    
+  }
+  .intro button a{
+    background-color: #000000; 
+    color: rgb(255, 240, 254);
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid rgb(255, 240, 254);
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 rgb(255, 240, 254);
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+
+    text-decoration: none;
+}
+
+.intro button{
+  margin-top: 40px;
+  margin-bottom: 200px;
+}
+
+.intro button a:hover{
+  box-shadow: inset 400px 0 0 0 rgb(255, 221, 254);
+  color: #333;
+}
+
+.textoIntro{
+  margin: auto;
+  position: sticky;
+  top: 400px;
+  min-width: 50%;
+  height: 200vh;
+}
+
+
+.textoIntro p:first-child{
+  animation: scrollLetras1 linear;
+  animation-timeline: scroll();
+}
+
+.textoIntro p:nth-child(2){
+  animation: scrollLetras2 linear;
+  animation-timeline: scroll();
+}
+
+.textoIntro p:nth-child(3){
+  animation: scrollLetras3 linear;
+  animation-timeline: scroll();
+}
+
+
+@keyframes scrollLetras1{
+  0%{
+    color: rgba(129, 129, 129, 0.219);
+  }
+
+  14%, 20%{
+    color: rgb(253, 240, 255); 
+  }
+  20%, 100%{
+    color: rgba(129, 129, 129, 0.219); 
+  }
+}
+
+@keyframes scrollLetras2{
+  0%, 20%{
+    color: rgba(129, 129, 129, 0.219); 
+  }
+  30%, 38%{
+    color: rgb(253, 240, 255); 
+  }
+  38%, 100%{
+    color: rgba(129, 129, 129, 0.219); 
+  }
+}
+
+@keyframes scrollLetras3{
+  0%, 38%{
+    color: rgba(129, 129, 129, 0.219); 
+  }
+
+  41%, 50%{
+    color: rgb(253, 240, 255);
+  }
+  51%, 100%{
+    color: rgba(129, 129, 129, 0.219); 
+  }
+
+}
+
+
+.recomendamos{
+  position: relative;
+  top: 1000px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-bottom: 1000px;
+  animation: recomendamos linear;
+  animation-timeline: scroll();
+}
+
+@keyframes recomendamos{
+  0%, 20%{
+    color: rgba(73, 73, 73, 0.219); font-size: .8;
+  }
+
+  20%, 100%{
+    color: rgb(253, 240, 255); size: 100%; font-size: .8;
+  }
+}
+
+.proximamente{
+  font-size: 60%;
+  padding-bottom: 100px;
+}
+
+.resto .foto1{
+  view-timeline-name: --imagen;
+  view-timeline-axis: block;
+
+  animation-timeline: --imagen;
+  animation-name: scrollFoto;
+
+  animation-range: entry 25% cover 50%;
+
+  animation-fill-mode: both;
+}
+
+.resto .foto2{
+  view-timeline-name: --imagen;
+  view-timeline-axis: block;
+
+  animation-timeline: --imagen;
+  animation-name: scrollFoto;
+
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
+}
+
+.resto .foto3{
+  view-timeline-name: --imagen;
+  view-timeline-axis: block;
+
+  animation-timeline: --imagen;
+  animation-name: scrollFoto;
+
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
+}
+.resto h3{
+  text-align: left;
+  padding-left: 60px;
+  margin-left: 60px;
+}
+
+@keyframes scrollFoto{
+  from{
+    opacity: 0;
+    scale: 25%;
+  }
+
+  to{
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+  /** MAIN */
+  main {
+    grid-area: main;
+  }
+  
+  /** ASIDE */
+  aside {
+    grid-area: aside;
+  }
+  
+ 
+  /** FOOTER */
+  footer a{
+
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+  }
+  
+  footer iframe{
+    margin-left: 15%;
+  }
+  
+  footer ul{
+    font-size: 13px;
+    letter-spacing: 5%;
+    color: rgba(211, 211, 211, 0.829);
+    padding-right: 40%;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  
+  }
+  footer {
+    grid-area: foot;
+    background-color:#292929a8;
+    color: white;
+    padding: 100px 80px;
+    display: flex;
+    
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  footer h3{
+    font-size: 48px;
+  }
+  
+  footer .right {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 13px;
+    
+  }
+
+  footer .right .links{
+    display: flex;
+    gap: 30px;
+    margin-right: 10px;
+
+  }
+  footer .right .links a{
+    color: rgba(211, 211, 211, 0.829);
+    font-size: 15px;
+    transition: color 0.3s ease;
+    
+  }
+
+  footer .right .links a:hover{
+    color: white;
+  }
+
+  footer .right .iconos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+  }
+
+  footer .right .iconos a{
+    color: lightgray;
+    font-size: 30px;
+    border: 1px solid #333;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px;
+    width: 20px;
+    height: 20px;
+    
+  }
+
+  footer .right p{
+    font-size: 13px;
+    color: #777;
+
+    margin-top: 20px;
+    margin-right: 5px;
+  }
+  
+  footer iframe{
+    margin-top: 10px;
+    width: 300px;
+    height: 200px;
+  }
+
+  /**-----RESPONSIVE-------*/
+  @media (max-width: 451px){
+    #container {
+      display: grid;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-columns: 1fr;
+    
+      width: 100vw;
+      grid-template-areas: 
+      "head "
+      "nav  "
+      "main  "
+      "aside"
+      "foot  "
+    ;
+    }
+
+    header img{
+      margin-top: 14px;
+      height:50px;
+    }
+
+    footer {
+      display: flex;  
+      justify-content: center;
+      flex-direction: column;
+    }
+  
+    footer h3{
+      text-align: center;
+    }
+    
+    footer .right {
+      width: 80%;
+      margin: auto;
+      margin-right: 0%;
+    }
+  
+    footer .right .links{
+      padding-right: 10%;  
+    }
+  
+    footer iframe{
+      margin-top: 10px;
+      margin: auto;
+    }
+  }
+
+
+.count-products{
+    position: fixed;
+
+
+    background-color: #a13c3c;
+    color: #000000;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    top: 881px;
+    right: 41px;
+    z-index: 1000;
+}
+
+#contador-productos{
+    font-size: 14px;
+}
+
+.fondoCarrito{
+  background-color: #fff;
+  border-radius: 100%;
+  position: fixed;
+  top: 840px;
+  right: 48px;
+  width: 65px;
+  height: 65px;
+  z-index: 999;
+}
+.icon-cart{
+    border-radius: 17px;
+    position: fixed;
+    top: 840px;
+    right: 50px;
+    width: 60px;
+    z-index: 1000;
+    stroke: #333;
+}
+
+.icon-cart:hover{
+    cursor: pointer;
+}
+
+
+

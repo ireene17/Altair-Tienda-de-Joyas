@@ -1,0 +1,133 @@
+
+/* Configuracion de margen para corrección de errores visuales */
+*{
+    margin: 0%;
+}
+
+body{
+    background-color: #000000;
+    background-image: url('../img/fondo4.jpg');
+    background-size: contain;
+}
+
+nav{
+    max-height: 50px;
+}
+
+/** TABLA */
+table{
+    border-collapse: collapse;
+    color: #fafafa
+}
+
+tr td{
+    border: 2px rgb(167, 167, 167) solid;
+    
+
+}
+th{
+    border: 2px rgb(202, 202, 202) solid;
+
+}
+thead th{
+    padding: 10px;
+    font-size: larger;
+}
+tbody th{
+    text-align: left;
+    padding:10px;
+}
+
+tfoot td{
+    padding: 10px;
+}
+.tabla{
+  max-width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; 
+  margin: auto;
+
+  margin-bottom: 50px;
+}
+
+table {
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.664)
+}
+
+/* Enlaces de la tabla: */
+table a{
+    color: rgb(212, 212, 212);
+    text-decoration: none;
+}
+
+table a:hover{
+    color: #fafafa;
+}
+
+
+/** Parte de las preguntas: */
+.secPreguntas{
+    margin-left: 30%;
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0.527);
+    color: #fafafa
+}
+h2{
+    margin-top: 20px;
+}
+.ultimo{
+    margin-bottom: 20px;
+}
+
+
+
+/* *RESPONSIVE */
+
+@media (max-width: 451px)
+{
+
+    *{
+        margin: 0%;
+    }
+    /* Parte preguntas */
+    table{
+        margin: 2%;
+    }
+
+    .secPreguntas{
+        margin: auto;
+        margin-right: 2px;
+    }
+
+    .ultimo{
+        margin-left: 10px;
+    }
+
+    /* Footer */
+    footer {
+        display: flex;  
+        justify-content: center;
+        flex-direction: column;
+      }
+    
+      footer h3{
+        text-align: center;
+      }
+      
+      footer .right {
+        width: 80%;
+        margin: auto;
+        margin-right: 0%;
+      }
+    
+      footer .right .links{
+        padding-right: 10%;  
+      }
+
+      footer iframe{
+        margin-top: 10px;
+      }
+
+}

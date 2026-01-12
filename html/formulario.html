@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icono de arriba: -->
+    <link rel="icon" href="../img/icono.png" sizes="any">
+    <!-- Importar  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" >
+
+    <!-- CSS: -->
+    <link rel="stylesheet" href="../css/style.css" >
+    <link rel="stylesheet" href="../css/formulario.css" >
+
+    <title>Registro</title>
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+</head>
+<body>  
+    <!-- *NAV -->
+    <nav class="itemNav">
+        <!-- nav que se despliega vertical -->
+                <ul class="barralat">
+                    <li onclick=hideSidebar()>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                        </svg>
+                    </li>                                                  
+                    <li><a href="formulario.html">Iniciar Sesion</a></li>
+                    <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+                    <li><a href="#">Saber Mas</a></li>
+                    <li><a href="#">Contacta con Nosotros</a></li>
+                </ul>
+                
+                
+        <!-- nav normal sin desplegar ni nada:  -->
+                <ul class="arriba">
+                    <section>
+                        <img src="../img/logoTiendaT3-removebg-preview.png" />
+                        <span class="barraNav">|</span>
+                        <li><a href="index.html">Altair</a></li>
+                    </section>
+
+                    <section>
+                        <li onclick=showProductos() class="desplegableNav">Nuestros Productos&nbsp;<i class="fa-solid fa-caret-down"></i>
+                            <ul class="barraProductos">
+                                <li onclick=mostrarFiltradoAnillos()><a href="index.html#item2">Anillos</a></li>
+                                <li onclick=mostrarFiltradoPendientes()><a href="index.html#item2">Pendientes</a></li>
+                                <li onclick=mostrarFiltradoCollares()><a href="index.html#item2">Collares</a></li>
+                            </ul>                      
+                        </li>
+                        
+                        <li onclick=mostrarTodos() class="topSellers"><a href="index.html#item2">Top Sellers</a></li>
+                    </section>
+
+                    <section>
+                        <li><a href="formulario.html">Iniciar Sesion</a></li>
+                        <li onclick=showSidebar()>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+                                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                            </svg>
+                        </li>
+                    </section>                        
+                </ul>
+            </nav>
+        <!-- *INICIO DE SESION -->
+        <div class="container" id="container">
+            <div class="form-container sign-in">
+                <form>
+                    <h1>Iniciar Sesión</h1>
+                    <div class="iconos">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a> 
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>                  
+                    </div>
+                    <span>o usa tu Email y contraseña</span>
+    
+                        <input type="email" placeholder="Email" maxlength="10" />
+                        <input type="password" placeholder="Contraseña*" required minlength="8"/>
+    
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                        <button type="submit">Iniciar sesion</button>
+                        <button type="reset">Borrar</button>
+                </form>
+            </div>
+
+            <!-- * REGISTRO -->
+            <div class="form-container sign-up">
+                <form>
+                    <h1>Registrarse</h1>
+                        
+                    <div class="iconos">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a> 
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>                  
+                    </div>
+                    <span>o usa tu correo para completar el registro</span>
+                        <input type="text" placeholder="Nombre*" required size="50" minlength="2"/>
+    
+                        <input type="text" placeholder="Apellidos"/>
+    
+                        <input type="email" placeholder="Email*" required/>
+       
+                        <input type="password" placeholder="Password*" required minlength="8"/>
+                     
+                        <label for="edad" class="letrasAparte">Edad:</label>
+                        <input list="edad" />
+                        <datalist id="edad">
+                            <option value="menor de edad">-18</option>
+                            <option value="mayor de edad">+18</option>
+                            <option value="mas de 20">+20</option>
+                            <option value="mas de 30">+30</option>
+                            <option value="mas de 40">+40</option>
+                        </datalist>
+    
+                        <label for="intereses" class="letrasAparte">Género:</label>
+                        <select name="genero" id="genero" >
+                            <option>Masculino</option>
+                            <option>Femenino</option>
+                            <option>Otro</option>
+                        </select>
+                        
+                        <button type="submit">Registrarse</button>
+                        <button type="reset">Borrar</button>
+    
+                </form>
+            </div>
+            <div class="alternar-container">
+                <div class="alternar">
+                    <div class="alternar-panel alternar-left">
+                        <h1>Bienvenid@ de nuevo!</h1>
+                        <p>Introduce tus detalles personales para poder acceder a todas las opciones</p>
+                        <button class="hidden" id="login">Iniciar sesión</button>
+                    </div>
+                    <div class="alternar-panel alternar-right">
+                        <h1>Bienvenid@!</h1>
+                        <p>Regístrate con tus detalles personales para poder acceder a todas las opciones</p>
+                        <button class="hidden" id="register">Registrarme</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+
+    <!-- Script para el nav desplegarse al hacer click -->
+    <script src="../js/script.js"></script>
+</body>
+</html>
