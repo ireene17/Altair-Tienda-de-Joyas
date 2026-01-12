@@ -63,3 +63,13 @@ Proyecto creado por **Irene Smykla Jiménez** para el aprendizaje en el desarrol
 
 > [!NOTE]
 > Para iniciar en navegador, abrir index.html (es la página de inicio).
+
+### Imágenes del proyecto:
+
+**Inicio:**
+![Hero principal donde se ve un anillo plateado en el centro y el nombre de la joyería "Altair" en la parte superior](Hero.png)
+**Productos:**
+![Demostración de como se ven 6 productos de la tienda, haciendo hover sobre uno de ellos](Shop.png)
+**Inicio de Sesión:**
+![Apartado de Inicio de Sesion del cliente](Login.png)
+
