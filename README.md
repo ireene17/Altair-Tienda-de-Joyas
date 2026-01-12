@@ -58,7 +58,8 @@ Durante el desarrollo de **Altair**, he logrado dominar:
 
 ---
 
-### 🖋️ Autor
+### Autora
 Proyecto creado por **Irene Smykla Jiménez** para el aprendizaje en el desarrollo Frontend.
 
-> [!TIP] Para iniciar en navegador, abrir index.html (es la página de inicio).
+> [!NOTE]
+> Para iniciar en navegador, abrir index.html (es la página de inicio).
